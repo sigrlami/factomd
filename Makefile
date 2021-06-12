@@ -1,5 +1,4 @@
-##REVISION = $(shell git describe --tags)
-REVISION = $(shellgit tag --sort=committerdate | tail -1)
+REVISION = $(shell git describe --tags --match "v*")
 $(info    Make factomd $(REVISION))
 
 # Strip leading 'v'
