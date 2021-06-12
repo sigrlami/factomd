@@ -1,4 +1,4 @@
-REVISION = $(shell git describe --tags --match "v*")
+REVISION = $(shell git describe --tags)
 $(info    Make factomd $(REVISION))
 
 # Strip leading 'v'
