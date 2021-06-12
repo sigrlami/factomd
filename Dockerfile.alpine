@@ -9,6 +9,9 @@ WORKDIR $GOPATH/src/github.com/FactomProject/factomd
 # Populate the rest of the source
 COPY . .
 
+# Get tags as they used during install
+RUN git fetch --unshallow
+
 # Build and install factomd
 RUN make install
 
